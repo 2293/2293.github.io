@@ -4,46 +4,77 @@
 	<meta charset="UTF-8">
 	<link href='/2293.ico' rel='icon' type='image/x-icon'/>
 	<title>2293</title>
+	<link href="jsoneditor/jsoneditor.min.css" rel="stylesheet" type="text/css">
+	<script src="jsoneditor/jsoneditor.min.js"></script>
 </head>
 <body>
 	<header><nav><span style="color:#0F0;font-size:20pt">2293</span>
-	<a href="#">猜想与悬赏 数学专题关键词 数学动画 新闻 </a>
+	<a href="#">猜想与悬赏 数学动画</a>
 	<a href="/mathchat">mathchat</a>
 	<a href="/jaxedit">JaxEdit</a> 
 	<a href="https://github.com/2293/ppmm/commit/bc94">ppmm</a>
 	<a href="/about.html">关于</a>
 	</nav>
 	</header>
-	<pre>
--->
-</pre>
-<pre>
-火星人(1326170603)  11:42:00
-我有道难题：
-2^i-2293 总是合数?
-Wyatt(879138218)  11:43:25
-这个。。确实是个难题
-火星人(1326170603)  11:46:16
-我已经知道 如果2^i-2293是质数,则i只能形如i=24k+1
-火星人(1326170603)  11:51:42
-2293是我很钟情的一个数字
-梁文辉(964262774)  11:51:51
-为什么
-火星人(1326170603)  11:52:01
-就因为这个问题
-火星人(1326170603)  11:53:22
-我试图把奇数 写成 2^i-p的形式，发现2293是没有成功的最小特例
-懿行天下(2298593451)  12:09:41
-@火星人 ，感觉像陈景润的哥德巴赫
-火星人(1326170603)  12:12:49
-没有那么深奥，我起初以为这个问题是我首创，但后来发现很古老，并且1960+年有人论文论证过
-火星人(1326170603)  12:14:13
-但他没有论证2293，而证明存在更大的数q满足2^i-q总是合数
-懿行天下(2298593451)  12:14:28
-哇，那你挺爱数学的
-B-应用数学-jack(2990075012)  12:14:33
-666
-</pre>
+--><br>
+<a href="gookey.json" target="_blank">gookey.json</a>
+<textarea id="jsonText" rows="2" cols="8">
+{"json":"data","free domain":["http://%s.ml"]}
+</textarea>
+<button onclick="editor.set(JSON.parse(document.getElementById('jsonText').value))">Load</button>
+<input list="urllist" name="urlInput" id="urlInput" value="https://www.google.com.hk/search?q=%s"/>
+<datalist id="urllist">
+  <option value="https://www.google.com/search?q=%s">
+  <option value="http://%s.com">
+  <option value="https://www.bing.com/search?q=%s">
+  <option value="https://www.bing.com/dict/search?q=%s">
+  <option value="http://%s.tk">
+</datalist>
+<div id="gookey"></div>
+<script>
+var container = document.getElementById("gookey");
+var editor;
+var options = {			mode: 'tree',search:true		};
+var rushwin;
+function rush(){
+            container.addEventListener("mouseover",
+                    function(){
+                        var sel=document.querySelector("#gookey .field:hover");
+                        sel=(!!sel)?sel:document.querySelector("#gookey .value:hover");
+                        if(sel){
+							var selhtml=sel.innerHTML;
+							if(selhtml.substr(0,4)=="http"){
+								if(selhtml.indexOf("%s")>-1){
+									document.getElementById("urlInput").value=selhtml;
+									
+								}else{
+								console.log(selhtml);
+								rushwin = window.open(selhtml,'RushWindow');
+								};
+							}else{						
+								console.log(selhtml);
+								var url= document.getElementById("urlInput").value.replace("%s",selhtml);
+								rushwin = window.open(url,'RushWindow');
+                            //gs.execute(selhtml);
+							}
+                        }
+                    },
+                    false);
+
+    };
+	
+var req = new XMLHttpRequest();
+    req.open("GET", "gookey.json", true);
+	//req.responseType="json";
+    req.onload = function(){
+		var json = JSON.parse(req.response);		
+		editor = new JSONEditor(container,options,json);
+		rush();
+	};
+    req.send(null);
+
+	
+</script>
 <footer><a href="https://github.com/2293">github/2293</a></footer>
 </body>
 </html>
