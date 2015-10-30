@@ -17,7 +17,7 @@
 	</nav>
 	</header>
 --><br>
-<a href="gookey.json" target="_blank">gookey.json</a>
+<a href="2293.json" target="_blank">2293.json</a>
 <textarea id="jsonText" rows="2" cols="8">
 {"json":"data","free domain":["http://%s.ml"]}
 </textarea>
@@ -48,14 +48,14 @@ function rush(){
 									document.getElementById("urlInput").value=selhtml;
 									
 								}else{
-								console.log(selhtml);
+								//console.log(selhtml);
 								rushwin = window.open(selhtml,'RushWindow');
 								};
 							}else{						
-								console.log(selhtml);
+								//console.log(selhtml);
 								var url= document.getElementById("urlInput").value.replace("%s",selhtml);
 								rushwin = window.open(url,'RushWindow');
-                            //gs.execute(selhtml);
+								//gs.execute(selhtml);
 							}
                         }
                     },
@@ -64,17 +64,32 @@ function rush(){
     };
 	
 var req = new XMLHttpRequest();
-    req.open("GET", "gookey.json", true);
+    req.open("GET", "2293.json", true);
 	//req.responseType="json";
     req.onload = function(){
 		var json = JSON.parse(req.response);		
 		editor = new JSONEditor(container,options,json);
 		rush();
+		editor.expandAll()
 	};
     req.send(null);
 
 	
 </script>
+
+<div id="disqus_thread"></div>
+<script>
+   (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//2293.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
 <footer><a href="https://github.com/2293">github/2293</a></footer>
 </body>
 </html>
