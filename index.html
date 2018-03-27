@@ -2,117 +2,15 @@
 <html lang="zh">
 <head>
 	<meta charset="UTF-8">
-	<link href='/2293.ico' rel='icon' type='image/x-icon'/>
-	<title>2293</title>
-	<link href="jsoneditor/jsoneditor.min.css" rel="stylesheet" type="text/css">
-	<script src="jsoneditor/jsoneditor.min.js"></script>
+	<link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+	<title>纯情部落</title>
 </head>
 <body>
-	<header><nav><span style="color:#0F0;font-size:20pt">2293</span>
-	<a href="http://poem.2293.tk">诗歌</a>
-	<a href="/mathchat">mathchat</a>
-	<a href="https://github.com/2293/ppmm/commit/bc94">ppmm</a>
-	<a href="/about.html">关于</a> <br>
-	
-	<a href="https://github.com/a-boy/rush">rush!</a> <a href="/tinycode">TinyCode</a> <a href="/s">泛搜</a> <a href="/jaxedit">JaxEdit</a> <a href="/Mergely/editor/">Mergely</a> <a href="/webbud">webbud</a>
-	</nav>
-	</header>
-----<br>
-<a href="2293.json" target="_blank">2293.json</a>
-<textarea id="jsonText" rows="2" cols="8">
-{"json":"data","free domain":["http://%s.ml"]}
-</textarea>
-<button onclick="editor.set(JSON.parse(document.getElementById('jsonText').value))">Load</button>
-<input list="urllist" name="urlInput" id="urlInput" value="https://www.bing.com/search?q=%s"/>
-<datalist id="urllist">
-  <option value="https://www.google.com/search?q=%s">
-  <option value="http://www.%s.com">
-  <option value="http://www.%s.cn">
-  <option value="http://%s.us">
-  <option value="http://%s.net">
-  <option value="https://scholar.google.com/scholar?q=%s">
-  <option value="http://academic.research.microsoft.com/Search?query=%s">
-  <option value="https://www.bing.com/search?q=%s">
-  <option value="https://www.bing.com/dict/search?q=%s">
-  <option value="http://%s.ml">
-</datalist>
-<div id="gookey"></div>
-<script>
-var container = document.getElementById("gookey");
-var editor;
-var options = {			mode: 'tree',search:true		};
-var rushwin;
-function rush(){
-            container.addEventListener("click",
-                    function(){
-                        var sel=document.querySelector("#gookey .field:hover");
-                        sel=(!!sel)?sel:document.querySelector("#gookey .value:hover");
-                        if(sel){
-							var selhtml=sel.innerHTML;
-							if(selhtml.substr(0,4)=="http"){
-								if(selhtml.indexOf("%s")>-1){
-									document.getElementById("urlInput").value=selhtml;
-									
-								}else{
-								//console.log(selhtml);
-								rushwin = window.open(selhtml,'RushWindow');
-								};
-							}else{						
-								//console.log(selhtml);
-								var url= document.getElementById("urlInput").value.replace("%s",selhtml);
-								rushwin = window.open(url,'RushWindow');
-								//gs.execute(selhtml);
-							}
-                        }
-                    },
-                    false);
-
-    };
-	
-var req = new XMLHttpRequest();
-    req.open("GET", "2293.json", true);
-	//req.responseType="json";
-    req.onload = function(){
-		var json = JSON.parse(req.response);		
-		editor = new JSONEditor(container,options,json);
-		rush();
-		editor.expandAll()
-	};
-    req.send(null);
-
-	
-</script>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-73655317-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-<div id="disqus_thread"></div>
-<script>
-   (function() {  // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        
-        s.src = '//2293.disqus.com/embed.js';
-        
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-<div id="links">
-<a href="http://a-boy.tk">a-boy.tk</a> 
-
-<a href="http://duckweed.herokuapp.com/">duckweed.herokuapp.com</a>
-</div>
-<footer><a href="https://github.com/2293">github/2293</a>
-QQ群 纯情部落火星人学习班 499866721
+<a href="http://qing.tk">纯情部落</a><br>
+音乐在线 歌词荟萃 歌谱琴谱 美女贴图 
+--------<br>	
+<footer><a href="https://github.com/2293">github/2293</a><br>
+QQ群  499866721  纯情部落火星人学习班
 </footer>
 </body>
 </html>
