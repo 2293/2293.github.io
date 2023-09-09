@@ -1,1 +1,1 @@
-# https://2293.ml  2293.github.io
+# https://2293.github.io
