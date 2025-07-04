@@ -19,7 +19,7 @@ if(langs.indexOf(language) !== -1){
 
 下面是一个简单的 Sage 计算示例：
 ```sage
-2 + 2
+2^3
 ```
 
 ```gp

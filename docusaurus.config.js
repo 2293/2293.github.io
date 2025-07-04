@@ -49,6 +49,7 @@ const config = {
       ({
         docs: {
           path: 'docs',
+          routeBasePath: '/', // Serve the docs at the site's root
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
           sidebarPath: './sidebars.js',
