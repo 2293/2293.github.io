@@ -1,0 +1,46 @@
+
+
+import React, { useEffect, useRef } from 'react';
+
+// Helper to generate a unique ID
+const generateId = () => `sagecell-${Math.random().toString(36).substring(2, 9)}`;
+
+const SageCell = ({ children }) => {
+  const id = useRef(generateId()).current; // Stable ID across re-renders
+  const sageCode = children;
+
+  useEffect(() => {
+    const loadSageCell = () => {
+      if (window.sagecell) {
+        window.sagecell.makeSagecell({
+          inputLocation: `#${id}`,
+          //template: window.sagecell.templates.minimal,
+          languages: sagecell.allLanguages,
+          evalButtonText: '运行',
+        });
+      }
+    };
+
+    if (!sagecell) {
+      const script = document.createElement('script');
+      script.src = 'https://sagecell.sagemath.org/static/embedded_sagecell.js';
+      script.async = true;
+      document.body.appendChild(script);
+      script.onload = () => {
+        // Use a timeout to ensure the sagecell object is fully initialized
+        setTimeout(loadSageCell, 100);
+      };
+    } else {
+      // Script is already there, just make the cell
+      setTimeout(loadSageCell, 100);
+    }
+  }, [id, sageCode]);
+
+  return (
+    <div id={id}>
+      <script type="text/x-sage">{sageCode}</script>
+    </div>
+  );
+};
+
+export default SageCell;
