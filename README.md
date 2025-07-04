@@ -1,4 +1,4 @@
-# 🚀 2293.fun - 基于 Docusaurus 和 SageCell 的交互式内容网站
+# 🚀 2293.fun - 数学演示(MathDemos) 基于 Docusaurus 和 SageCell 的交互式内容网站
 
 <div align="center">
   <a href="https://2293.fun">
@@ -20,22 +20,22 @@
 
 ## 📖 关于项目
 
-本项目是 [2293.fun](https://2293.fun) 网站的驱动核心，旨在让学习和实验变得无缝衔接。它基于现代化的静态网站生成器 [Docusaurus 2](https://docusaurus.io/) 构建，并通过深度整合 [SageCell](https://sagecell.sagemath.org/) 获得了强大的交互能力。
+本项目是 [2293.fun](https://2293.fun) 网站的驱动核心，旨在让学习和实验变得无缝衔接。它基于现代化的静态网站生成器 [Docusaurus](https://docusaurus.io/) 构建，并通过深度整合 [SageCell](https://sagecell.sagemath.org/) 获得了强大的交互能力。
 
-这种组合允许作者创建内容丰富的交互式文章，用户可以直接在浏览器中执行多种语言的代码片段，包括 Python、R、Octave 等。对于教程、技术博客和教育材料来说，这是一个理想的解决方案。
+这种组合允许作者创建内容丰富的交互式文章，用户可以直接在浏览器中执行多种语言的代码片段，包括 Sagemath、Python、GP、R、Octave 等。这可能是一个理想的学习数学的平台。
 
 ### ✨ 主要特性
 
 *   **现代化文档:** 由 Docusaurus 驱动，提供清晰、易于访问且支持版本控制的文档系统。
 *   **交互式代码块:** 支持在页面上直接执行 10 种不同语言的代码。
-*   **默认自动执行:** 代码块在页面加载时会自动运行，以便立即看到结果，同时提供禁用选项。
+*   **默认自动执行:** 代码块在页面加载时会自动运行，以便立即看到结果。
 *   **智能语言选择:** 代码块的语言会在 SageCell 的下拉菜单中被自动设为默认选项，同时允许用户切换到其他语言。
 *   **React 驱动:** 充分利用 React 的能力来创建自定义组件和动态页面。
 *   **Markdown/MDX:** 使用简洁的 Markdown 和强大的 JSX 来编写内容。
 
 ### 🛠️ 技术栈
 
-*   [Docusaurus 2](https://docusaurus.io/)
+*   [Docusaurus](https://docusaurus.io/)
 *   [React.js](https://reactjs.org/)
 *   [SageCell](https://sagecell.sagemath.org/)
 *   [MDX](https://mdxjs.com/)
@@ -61,12 +61,9 @@
     ```sh
     git clone https://github.com/2293/2293.github.io.git
     ```
-2.  进入项目目录:
+2.  进入项目目录，安装项目依赖:
     ```sh
     cd 2293.github.io
-    ```
-3.  安装项目依赖:
-    ```sh
     npm install
     ```
 
@@ -84,13 +81,13 @@ npm start
 
 ## ✍️ 使用与内容创作
 
-创建内容非常简单，只需在 `blog` 或 `docs` 目录下添加 Markdown (`.md`) 或 MDX (`.mdx`) 文件即可。
+创建内容非常简单，只需在 `docs` 目录下添加 Markdown (`.md`) 或 MDX (`.mdx`) 文件即可。
 
 ### 交互式 SageCell 代码块
 
 要创建一个可由 SageCell 处理的交互式代码块，请使用标准的 Markdown 围栏代码块语法，并指定相应的语言标识符。
 
-**支持的语言:** `sage`, `gap`, `gp`, `html`, `macaulay2`, `maxima`, `octave`, `python`, `r`, `singular`。
+**支持的语言:** `sagecell.allLanguages==['sage', 'gap', 'gp', 'html', 'macaulay2', 'maxima', 'octave', 'python', 'r', 'singular']`
 
 #### 默认行为（自动执行）
 

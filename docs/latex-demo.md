@@ -1,5 +1,6 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
+tags: [LaTeX,Sagecell]
 ---
 
 # LaTeX 示例
@@ -18,20 +19,22 @@ $$
 \frac{n!}{k!(n-k)!} = \binom{n}{k}
 $$
 
+要显示\$符号，请使用 `\$` 或者  &#96;\$&#96;。
 
 ## 绘制函数图像并添加 LaTeX 标签
 
 下面是一个绘制函数图像并添加 LaTeX 标签的示例：
 
 ```sage
+# 2025年中国数学高考题
 var('x')
-f = sin(x)
+f = 5*cos(x)-cos(5*x)
 
 # 绘制函数图像
 p = plot(f, (x, -2*pi, 2*pi))
 
-p.set_axes_range(ymin=-1.5, ymax=1.5)
-p.axes_labels(['$x$', '$\\sin(x)$'])
+p.set_axes_range(ymin=-6, ymax=6)
+p.axes_labels(['$x$', '$5*\\cos(x)-\\cos(5*x)$'])
 p.show()
 ```
 
