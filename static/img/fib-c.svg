@@ -1,0 +1,83 @@
+<svg width="400" height="470" xmlns="http://www.w3.org/2000/svg" style="background-color: #f5f5f5;">
+  <style>
+    .fib-text {
+      font-family: Consolas, 'Courier New', monospace;
+      font-size: 24px;
+    }
+  </style>
+  
+  <!-- Row 1 -->
+  <text x="80" y="30" fill="#9C27B0" class="fib-text" text-anchor="end">0</text>
+  <text x="210" y="30" fill="#4CAF50" class="fib-text" text-anchor="end">1</text>
+  <text x="340" y="30" fill="#2196F3" class="fib-text" text-anchor="end">1</text>
+  
+  <!-- Row 2 -->
+  <text x="80" y="60" fill="#9C27B0" class="fib-text" text-anchor="end">2</text>
+  <text x="210" y="60" fill="#4CAF50" class="fib-text" text-anchor="end">3</text>
+  <text x="340" y="60" fill="#2196F3" class="fib-text" text-anchor="end">5</text>
+  
+  <!-- Row 3 -->
+  <text x="80" y="90" fill="#9C27B0" class="fib-text" text-anchor="end">8</text>
+  <text x="210" y="90" fill="#4CAF50" class="fib-text" text-anchor="end">13</text>
+  <text x="340" y="90" fill="#2196F3" class="fib-text" text-anchor="end">21</text>
+  
+  <!-- Row 4 -->
+  <text x="80" y="120" fill="#9C27B0" class="fib-text" text-anchor="end">34</text>
+  <text x="210" y="120" fill="#4CAF50" class="fib-text" text-anchor="end">55</text>
+  <text x="340" y="120" fill="#2196F3" class="fib-text" text-anchor="end">89</text>
+  
+  <!-- Row 5 -->
+  <text x="80" y="150" fill="#9C27B0" class="fib-text" text-anchor="end">144</text>
+  <text x="210" y="150" fill="#4CAF50" class="fib-text" text-anchor="end">233</text>
+  <text x="340" y="150" fill="#2196F3" class="fib-text" text-anchor="end">377</text>
+  
+  <!-- Row 6 -->
+  <text x="80" y="180" fill="#9C27B0" class="fib-text" text-anchor="end">610</text>
+  <text x="210" y="180" fill="#4CAF50" class="fib-text" text-anchor="end">987</text>
+  <text x="340" y="180" fill="#2196F3" class="fib-text" text-anchor="end">1597</text>
+  
+  <!-- Row 7 -->
+  <text x="80" y="210" fill="#9C27B0" class="fib-text" text-anchor="end">2584</text>
+  <text x="210" y="210" fill="#4CAF50" class="fib-text" text-anchor="end">4181</text>
+  <text x="340" y="210" fill="#2196F3" class="fib-text" text-anchor="end">6765</text>
+  
+  <!-- Row 8 (Alignment switch happens here) -->
+  <text x="8" y="240" fill="#9C27B0" class="fib-text" text-anchor="start">10946</text>
+  <text x="138" y="240" fill="#4CAF50" class="fib-text" text-anchor="start">17711</text>
+  <text x="268" y="240" fill="#2196F3" class="fib-text" text-anchor="start">28657</text>
+  
+  <!-- Row 9 -->
+  <text x="8" y="270" fill="#9C27B0" class="fib-text" text-anchor="start">46368</text>
+  <text x="138" y="270" fill="#4CAF50" class="fib-text" text-anchor="start">75025</text>
+  <text x="268" y="270" fill="#2196F3" class="fib-text" text-anchor="start">121393</text>
+  
+  <!-- Row 10 -->
+  <text x="8" y="300" fill="#9C27B0" class="fib-text" text-anchor="start">196418</text>
+  <text x="138" y="300" fill="#4CAF50" class="fib-text" text-anchor="start">317811</text>
+  <text x="268" y="300" fill="#2196F3" class="fib-text" text-anchor="start">514229</text>
+  
+  <!-- Row 11 -->
+  <text x="8" y="330" fill="#9C27B0" class="fib-text" text-anchor="start">832040</text>
+  <text x="138" y="330" fill="#4CAF50" class="fib-text" text-anchor="start">1346269</text>
+  <text x="268" y="330" fill="#2196F3" class="fib-text" text-anchor="start">2178309</text>
+  
+  <!-- Row 12 -->
+  <text x="8" y="360" fill="#9C27B0" class="fib-text" text-anchor="start">3524578</text>
+  <text x="138" y="360" fill="#4CAF50" class="fib-text" text-anchor="start">5702887</text>
+  <text x="268" y="360" fill="#2196F3" class="fib-text" text-anchor="start">9227465</text>
+  
+  <!-- Row 13 -->
+  <text x="8" y="390" fill="#9C27B0" class="fib-text" text-anchor="start">14930352</text>
+  <text x="138" y="390" fill="#4CAF50" class="fib-text" text-anchor="start">24157817</text>
+  <text x="268" y="390" fill="#2196F3" class="fib-text" text-anchor="start">39088169</text>
+  
+  <!-- Row 14 -->
+  <text x="8" y="420" fill="#9C27B0" class="fib-text" text-anchor="start">63245986</text>
+  <text x="138" y="420" fill="#4CAF50" class="fib-text" text-anchor="start">102334155</text>
+  <text x="268" y="420" fill="#2196F3" class="fib-text" text-anchor="start">165580141</text>
+  
+  <!-- Row 15 -->
+  <text x="8" y="450" fill="#9C27B0" class="fib-text" text-anchor="start">267914296</text>
+  <text x="138" y="450" fill="#4CAF50" class="fib-text" text-anchor="start">433494437</text>
+  <text x="268" y="450" fill="#2196F3" class="fib-text" text-anchor="start">701408733</text>
+</svg>
